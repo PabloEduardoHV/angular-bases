@@ -1,0 +1,15 @@
+h1 {
+  font-size: 4rem;
+  padding: 5px;
+}
+dl {
+  padding: 5px;
+}
+dd {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hero__btn-container {
+  display: inline-block;
+  padding: 5px;
+}
