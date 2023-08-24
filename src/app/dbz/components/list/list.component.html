@@ -18,7 +18,7 @@
       <span class="item-number"> {{ i + 1 }}. </span>
       <span class="item-text"> {{character.name}} - {{character.power}} </span>
     </div>
-    <button class="btn btn-danger" (click)="emitDeletedCharactersIndex(i)">
+    <button class="btn btn-danger" (click)="emitDeletedCharactersID(character.id!)">
       X
     </button>
 

@@ -13,12 +13,19 @@ export class ListComponent {
   public characters: Character[] = [];
 
   @Output()
-  public onDeleteCharacter: EventEmitter <number> = new EventEmitter();
+  public onDeleteCharacter: EventEmitter <string> = new EventEmitter();
 
   /* Métodos */
+  /*
   emitDeletedCharactersIndex(index: number): void {
     console.log('Greetings from ListComponent')
     console.log(index);
     this.onDeleteCharacter.emit(index);
+  }
+  */
+  emitDeletedCharactersID(id: string): void {
+    console.log('Greetings from ListComponent')
+    console.log(id);
+    this.onDeleteCharacter.emit(id);
   }
 }

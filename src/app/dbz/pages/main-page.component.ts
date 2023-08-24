@@ -1,6 +1,7 @@
 /* COMPONENTE PADRE */
 import { Component } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'dbz-main-page',
@@ -10,29 +11,18 @@ import { Character } from '../interfaces/character.interface';
 
 export class MainPageComponent {
   /* Propiedades */
-  public characters: Character[] = [{
-    name: 'Krilin',
-    power: 1000
-  }, {
-    name: 'Goku',
-    power: 9500
-  }, {
-    name: 'Trunk',
-    power: 100
-  }, {
-    name: 'Androide 18',
-    power: 7000
-  }];
 
   /* Metodos */
-  receiveCharacter(character: Character): void {
-    console.log('Greetings from main page');
-    console.log(character)
-    this.characters.push(character);
+  constructor(private dbzService: DbzService) {
+
   }
-  receiveDeletedCharactersIndex(index: number): void {
-    console.log('Greetings from MainPageComponent');
-    console.log('indice recibido');
-    this.characters.splice(index, 1);
+  get characters(): Character[] {
+    return [...this.dbzService.characters];
+  }
+  onDeleteCharacter(id: string):void {
+    this.dbzService.deleteCharacterByID(id);
+  }
+  onNewCharacter(character: Character): void {
+    this.dbzService.addNewCharacter(character);
   }
 }
