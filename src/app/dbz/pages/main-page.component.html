@@ -3,7 +3,7 @@
   <h1>DBZ Characters</h1>
   <div class="row">
     <div class="col">
-      <dbz-list [characters]="characters"></dbz-list> <!-- Componente Hijo 1-->
+      <dbz-list [characters]="characters" (onDeleteCharacter)="receiveDeletedCharactersIndex($event)"></dbz-list> <!-- Componente Hijo 1-->
     </div>
     <div class="col">
       <dbz-add-character (onNewCharacter)="receiveCharacter($event)"></dbz-add-character> <!-- Componente Hijo 2-->

@@ -1,7 +1,7 @@
 <h3>List</h3>
 <ul class="list-group">
   <li
-  class="list-group-item"
+  class="list-group-item d-flex justify-content-between align-items-center"
   *ngFor="let character of characters;
   let i = index;
   let isEven = even;
@@ -13,8 +13,14 @@
     'even-field': isEven,
     'odd-field': isOdd
   }">
-    <span class="item-number"> {{ i + 1 }}. </span>
-    <span class="item-text"> {{character.name}} - {{character.power}} </span>
+
+    <div>
+      <span class="item-number"> {{ i + 1 }}. </span>
+      <span class="item-text"> {{character.name}} - {{character.power}} </span>
+    </div>
+    <button class="btn btn-danger" (click)="emitDeletedCharactersIndex(i)">
+      X
+    </button>
 
   </li>
 </ul>

@@ -30,4 +30,9 @@ export class MainPageComponent {
     console.log(character)
     this.characters.push(character);
   }
+  receiveDeletedCharactersIndex(index: number): void {
+    console.log('Greetings from MainPageComponent');
+    console.log('indice recibido');
+    this.characters.splice(index, 1);
+  }
 }
