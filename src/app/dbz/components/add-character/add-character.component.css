@@ -1,0 +1,12 @@
+.btn-submit {
+  background-color: #F85B1A;
+  border: #F85B1A;
+}
+.btn-submit:hover {
+  background-color: #072083;
+  border: #072083;
+}
+input:focus {
+  border: #072083;
+  box-shadow: 0px 0px 10px rgba(7, 32, 131, 1) !important;
+}

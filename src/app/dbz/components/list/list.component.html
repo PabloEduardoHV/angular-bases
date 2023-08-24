@@ -1,0 +1,20 @@
+<h3>List</h3>
+<ul class="list-group">
+  <li
+  class="list-group-item"
+  *ngFor="let character of characters;
+  let i = index;
+  let isEven = even;
+  let isOdd = odd;
+  let isFirst = first;
+  let isLast = last
+  "
+  [ngClass]="{
+    'even-field': isEven,
+    'odd-field': isOdd
+  }">
+    <span class="item-number"> {{ i + 1 }}. </span>
+    <span class="item-text"> {{character.name}} - {{character.power}} </span>
+
+  </li>
+</ul>

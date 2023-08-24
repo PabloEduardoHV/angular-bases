@@ -1,0 +1,12 @@
+.odd-field {
+  border-color: #FFD7C1 ;
+  background-color: #FFD7C1;
+}
+.even-field {
+  border-color: #E59982;
+  background-color: #E59982;
+}
+.item-number {
+  font-weight: bold;
+  color: #072083;
+}
